@@ -13,15 +13,11 @@ function App() {
   switch (window.location.pathname) {
     case '/home':
       component = <Main />
-      break
     case '/':
       component = <Main />
       break
     case '/contact':
       component = <Contact />
-      break
-    case '/about':
-      component = <About />
       break
   }
   return (
@@ -29,10 +25,6 @@ function App() {
       <Header />
       {component}
       <Footer />
-      {/* <Contact /> */}
-      {/* <Header />
-      <Main />
-      <Footer /> */}
     </div>
   )
 }

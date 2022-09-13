@@ -7,19 +7,16 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faToggleOff } from '@fortawesome/free-solid-svg-icons'
 
-function Navbar() {
+function Navbar(props) {
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${props.navState ? 'show' : ''}`}>
         <ul>
           <li>
             <a href="/">
               <p>Home</p>
             </a>
           </li>
-          <li>{/* <a href="about">
-          <p>About</p>
-        </a> */}</li>
           <li>
             <a className="techAnchor" href="/#techId">
               <p>Tech Stack</p>
