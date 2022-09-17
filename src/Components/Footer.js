@@ -1,9 +1,9 @@
+import { Box } from '@mui/material'
 import React from 'react'
-import footerLogo from '../images/logo.png'
 export const Footer = () => {
   return (
-    <div className="footer">
+    <Box bgcolor={'palette.background.default'} color={'text.primary'}>
       <span>© all rights reserved. powered by DF. 2022</span>
-    </div>
+    </Box>
   )
 }

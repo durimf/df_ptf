@@ -8,25 +8,107 @@ import vsImg from '../images/techstack/vscode.png'
 import muiImg from '../images/techstack/mui.png'
 import bootImg from '../images/techstack/bootstrap.png'
 import gitHubImg from '../images/techstack/github.png'
+import { Box, Container, Grid, Paper, Typography } from '@mui/material'
+import { green } from '@mui/material/colors'
 function Tech(props) {
   return (
-    <>
-      <div className="tech" id="techId">
-        <h1 className="tech-title">My Skills</h1>
-        <p className="tech-description">Skills I have so far</p>
-        <div className="tech-images">
-          <img src={cssImg}></img>
-          <img src={htmlImg}></img>
-          <img src={jsImg}></img>
-          <img src={reactImg}></img>
-          <img src={gitImg}></img>
-          <img src={vsImg}></img>
-          <img src={muiImg} height="100px"></img>
-          <img src={bootImg} height="100px"></img>
-          <img src={gitHubImg} height="100px"></img>
-        </div>
-      </div>
-    </>
+    <Container
+      sx={{
+        display: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        marginBottom: {
+          xs: 5,
+          sm: 10,
+          md: 30,
+          lg: 40,
+          xl: 50,
+        },
+      }}
+    >
+      <Box
+        sx={{
+          color: 'text.primary',
+          marginBottom: 5,
+        }}
+      >
+        <Typography
+          variant="h2"
+          textAlign={'center'}
+          m={1}
+          className={'skillsTitle'}
+          sx={{
+            fontSize: {
+              xs: 25,
+              sm: 35,
+              md: 70,
+              lg: 75,
+              xl: 85,
+            },
+            color: 'text.primary',
+            fontWeight: {
+              xs: 300,
+              sm: 200,
+              md: 100,
+            },
+          }}
+        >
+          My Skills
+        </Typography>
+        <Typography
+          variant="h5"
+          textAlign={'center'}
+          sx={{
+            fontSize: {
+              xs: 12,
+              md: 35,
+              lg: 35,
+              xl: 40,
+            },
+
+            color: 'text.primary',
+            fontWeight: {
+              xs: 200,
+              sm: 200,
+              md: 100,
+            },
+          }}
+        >
+          Skills I have so far
+        </Typography>
+      </Box>
+
+      <Grid container spacing={8} marginBottom={10}>
+        <Grid item xs={4}>
+          <img src={cssImg} className="techImg"></img>
+        </Grid>
+        <Grid item xs={4}>
+          <img src={htmlImg} className="techImg"></img>
+        </Grid>
+        <Grid item xs={4}>
+          <img src={jsImg} className="techImg"></img>
+        </Grid>
+        <Grid item xs={4}>
+          <img src={reactImg} className="techImg"></img>
+        </Grid>
+        <Grid item xs={4}>
+          <img src={gitImg} className="techImg"></img>
+        </Grid>
+        <Grid item xs={4}>
+          <img src={vsImg} className="techImg"></img>
+        </Grid>
+        <Grid item xs={4}>
+          <img src={muiImg} className="techImg"></img>
+        </Grid>
+        <Grid item xs={4}>
+          <img src={bootImg} className="techImg"></img>
+        </Grid>
+        <Grid item xs={4}>
+          <img src={gitHubImg} className="techImg"></img>
+        </Grid>
+      </Grid>
+    </Container>
   )
 }
 

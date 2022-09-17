@@ -1,23 +1,22 @@
 export default [
   {
     id: 1,
+    Title: 'Calculator',
+    Description: 'Simple calculator made with React and Material UI',
+    Tech: 'CSS,HTML, ReactJS',
+    imageUrl:
+      'https://images.unsplash.com/photo-1561112079-2c3226d9c559?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
+    GitUrl: '',
+    ProjectUrl: '/home',
+  },
+  {
+    id: 2,
     Title: 'E-commerce',
     Description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, unde delectus laudantium hic expedita enim dignissimos corrupti laboriosam beatae facere?',
     Tech: 'CSS,HTML, ReactJS',
     imageUrl:
       'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80',
-    GitUrl: '',
-    ProjectUrl: '/home',
-  },
-  {
-    id: 2,
-    Title: 'Calculator',
-    Description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, unde delectus laudantium hic expedita enim dignissimos corrupti laboriosam beatae facere?',
-    Tech: 'CSS,HTML, ReactJS',
-    imageUrl:
-      'https://images.unsplash.com/photo-1561112079-2c3226d9c559?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
     GitUrl: '',
     ProjectUrl: '/home',
   },

@@ -4,15 +4,23 @@ import Input from '@mui/material/Input'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import { ThemeProvider, createMuiTheme } from '@mui/material/styles'
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
+import { Alert, Box, Typography } from '@mui/material'
+import ReactConfetti from 'react-confetti'
 
 function ContactForm() {
   const form = useRef()
 
-  const sendEmail = (e) => {
-    alert('Thank you for emailing me! I will come shortly to you.')
-    e.preventDefault()
+  const niceAlert = () => {
+    return (
+      <Alert variant="filled" severity="success">
+        This is a success alert — check it out!
+      </Alert>
+    )
+  }
 
+  const sendEmail = (e) => {
+    e.preventDefault()
     emailjs
       .sendForm(
         'service_xxc4yyq',
@@ -31,63 +39,52 @@ function ContactForm() {
     e.target.reset()
   }
 
-  const theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: '#784BA0',
-      },
-    },
-  })
-
   return (
-    <ThemeProvider theme={theme}>
-      <div className="ContactForm">
-        <form ref={form} className="form" onSubmit={sendEmail}>
-          <h1 className="form-title">Send me a message</h1>
-          <Input
-            style={{
-              '&:hover': {
-                backgroundColor: 'red',
-              },
-            }}
-            className="Input"
-            placeholder="Name"
-            id="input"
-            color="primary"
-            name="name"
-          />
-          <Input
-            placeholder="Email"
-            id="input"
-            color="primary"
-            name="user_email"
-          />
-          <Input
-            placeholder="Subject"
-            id="input"
-            color="primary"
-            name="subject"
-          />
-          <TextField
-            id="text"
-            label="Message"
-            multiline
-            rows={4}
-            defaultValue=""
-            color="primary"
-            name="message"
-          />
-          <Button
-            type="submit"
-            className="form-btn"
-            variant="contained"
-            color="primary"
-          >
-            Submit
-          </Button>
-        </form>
-      </div>
-    </ThemeProvider>
+    <Box
+      className="ContactForm"
+      sx={{
+        background: 'background.default',
+        color: 'text.primary',
+        display: 'flex',
+        justifyContent: 'center',
+        height: '60%',
+        width: '50%',
+        border: '1px solid',
+        borderColor: '#fff',
+        borderRadius: 10,
+        boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+        padding: 5,
+      }}
+    >
+      <form ref={form} className="form" onSubmit={sendEmail}>
+        <Typography variant="h2" color={'text.primary'}>
+          Send me a message
+        </Typography>
+        <Input placeholder="Name" />
+        <Input placeholder="Email" />
+        <TextField
+          id="text"
+          label="Message"
+          multiline
+          rows={4}
+          defaultValue=""
+          name="message"
+        />
+        <Button
+          type="submit"
+          variant="contained"
+          onClick={() =>
+            alert('Thanks for messaging me you will be contacted shortly!')
+          }
+          sx={{
+            backgroundColor: 'text.primary',
+            color: 'background.default',
+          }}
+        >
+          Submit
+        </Button>
+      </form>
+    </Box>
   )
 }
 
