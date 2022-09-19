@@ -29,19 +29,19 @@ function App() {
 
   let component
   switch (window.location.pathname) {
-    case '/home':
+    case 'https://duroportfolio.netlify.app/home':
       component = <Main />
       break
-    case '/':
+    case 'https://duroportfolio.netlify.app/':
       component = <Main />
       break
-    case '/contact':
+    case 'https://duroportfolio.netlify.app/contact':
       component = <Contact />
       break
-    case '/projects':
+    case 'https://duroportfolio.netlify.app/projects':
       component = <Projects />
       break
-    case '/tech%20stack':
+    case 'https://duroportfolio.netlify.app/tech%20stack':
       component = <Tech />
       break
     default:
