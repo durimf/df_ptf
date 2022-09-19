@@ -80,35 +80,35 @@ function Tech(props) {
 
       <Grid container spacing={8} marginBottom={10}>
         <Grid item xs={4}>
-          <img src={cssImg} className="techImg" alt="css logo image"></img>
+          <img src={cssImg} className="techImg" alt='cssLogo'/>
         </Grid>
         <Grid item xs={4}>
-          <img src={htmlImg} className="techImg" alt="html logo image"></img>
+          <img src={htmlImg} className="techImg" alt='htmLogo' />
         </Grid>
         <Grid item xs={4}>
           <img
             src={jsImg}
             className="techImg"
-            alt="java script logo image"
-          ></img>
+            alt="jsLogo"
+          />
         </Grid>
         <Grid item xs={4}>
-          <img src={reactImg} className="techImg" alt="react logo"></img>
+          <img src={reactImg} className="techImg" alt="#"></img>
         </Grid>
         <Grid item xs={4}>
-          <img src={gitImg} className="techImg" alt="git logo"></img>
+          <img src={gitImg} className="techImg" alt=""></img>
         </Grid>
         <Grid item xs={4}>
-          <img src={vsImg} className="techImg" alt="visual studio logo"></img>
+          <img src={vsImg} className="techImg" alt=""></img>
         </Grid>
         <Grid item xs={4}>
-          <img src={muiImg} className="techImg" alt="material ui logo"></img>
+          <img src={muiImg} className="techImg" alt=""></img>
         </Grid>
         <Grid item xs={4}>
-          <img src={bootImg} className="techImg" alt="boot logo"></img>
+          <img src={bootImg} className="techImg" alt=""></img>
         </Grid>
         <Grid item xs={4}>
-          <img src={gitHubImg} className="techImg" alt="git hub logo"></img>
+          <img src={gitHubImg} className="techImg" alt=""></img>
         </Grid>
       </Grid>
     </Container>

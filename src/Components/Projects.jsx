@@ -18,7 +18,7 @@ function Projects(props) {
             borderTopRightRadius: 30,
           }}
         >
-          <img className="project--image" src={project.imageUrl} alt="project photo"></img>
+          <img className="project--image" src={project.imageUrl} alt=""/>
         </Box>
         <Box
           className="project--second"
