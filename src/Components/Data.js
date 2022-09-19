@@ -7,7 +7,7 @@ export const Data = [
     imageUrl:
       'https://images.unsplash.com/photo-1561112079-2c3226d9c559?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
     GitUrl: 'https://github.com/durimf/CalculatorApp.git',
-    ProjectUrl: 'https://calculatorappbyduro.netlify.app/',
+    ProjectUrl: 'https://calculatorappdf.netlify.app/',
   },
   {
     id: 2,
