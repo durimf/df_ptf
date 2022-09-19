@@ -8,7 +8,6 @@ import { Box, createTheme, Stack, ThemeProvider } from '@mui/material'
 import { green, grey, purple, red } from '@mui/material/colors'
 import Projects from './Components/Projects'
 import Tech from './Components/Tech'
-import { styled } from '@mui/material/styles'
 // import './App.css'
 
 function App() {

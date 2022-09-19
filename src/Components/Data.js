@@ -1,3 +1,5 @@
+import CalPic from '../images/cal.png'
+
 export default [
   {
     id: 1,
@@ -6,7 +8,7 @@ export default [
     Tech: 'CSS,HTML, ReactJS',
     imageUrl:
       'https://images.unsplash.com/photo-1561112079-2c3226d9c559?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
-    GitUrl: '',
+    GitUrl: 'https://github.com/durimf/CalculatorApp.git',
     ProjectUrl: '/home',
   },
   {
