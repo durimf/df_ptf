@@ -114,18 +114,19 @@ background-clip: text;
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
   /* Other styles */
-  min-height: 400px;
+  min-height: 500px;
   padding: 10px;
   margin-right: 200px;
 }
 .df-img {
   background:url(../src/images/qwerty.png);
   background-size: cover;
-  min-height: 400px;
-  min-width: 400px; 
+  min-height: 500px;
+  min-width: 500px; 
   border-radius: 100%;
- 
 }
+
+
 
 .me--img:hover {
    -webkit-animation: swing 1s ease;

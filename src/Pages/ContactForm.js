@@ -4,7 +4,7 @@ import Input from '@mui/material/Input'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import emailjs from '@emailjs/browser'
-import { Alert, Box, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 function ContactForm() {
   const form = useRef()

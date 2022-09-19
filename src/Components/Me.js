@@ -76,7 +76,7 @@ function Me(props) {
           href="https://www.linkedin.com/in/durimfetahaj/"
           target="_blank"
         >
-          <img className="df-img" alt="durosImage"></img>
+          <img className="df-img" alt=""></img>
         </a>
       </Box>
     </>
