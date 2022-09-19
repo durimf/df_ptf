@@ -1,8 +1,5 @@
-import { styled } from '@mui/material/styles'
 import { Box, Typography } from '@mui/material'
-import { green, red } from '@mui/material/colors'
-import { React, useEffect, useState } from 'react'
-import imgQwerty from '../images/qwerty.png'
+import { React } from 'react'
 import '../App.css'
 
 function Me(props) {
@@ -73,12 +70,13 @@ function Me(props) {
           frontend developer and I <span className="love">love</span> what I do.
         </Typography>
         <a
+          rel="noreferrer"
           className="me--img"
           src="../images/qwerty.png"
           href="https://www.linkedin.com/in/durimfetahaj/"
           target="_blank"
         >
-          <img className="df-img"></img>
+          <img className="df-img" alt="durosImage"></img>
         </a>
       </Box>
     </>

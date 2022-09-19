@@ -1,6 +1,4 @@
-import CalPic from '../images/cal.png'
-
-export default [
+export const Data = [
   {
     id: 1,
     Title: 'Calculator',
@@ -9,7 +7,7 @@ export default [
     imageUrl:
       'https://images.unsplash.com/photo-1561112079-2c3226d9c559?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
     GitUrl: 'https://github.com/durimf/CalculatorApp.git',
-    ProjectUrl: '/home',
+    ProjectUrl: 'https://calculatorappbyduro.netlify.app/',
   },
   {
     id: 2,
@@ -67,3 +65,5 @@ export default [
     ProjectUrl: '/home',
   },
 ]
+
+export default Data
