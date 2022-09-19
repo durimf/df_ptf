@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Navbar } from './Components/Navbar'
 import { Main } from './Components/Main'
 import { Footer } from './Components/Footer'
 import Contact from './Pages/Contact'
-import About from './Pages/About'
 import { Box, createTheme, Stack, ThemeProvider } from '@mui/material'
-import { green, grey, purple, red } from '@mui/material/colors'
+import { grey } from '@mui/material/colors'
 import Projects from './Components/Projects'
 import Tech from './Components/Tech'
 // import './App.css'
@@ -32,6 +31,7 @@ function App() {
   switch (window.location.pathname) {
     case '/home':
       component = <Main />
+      break
     case '/':
       component = <Main />
       break
@@ -44,6 +44,8 @@ function App() {
     case '/tech%20stack':
       component = <Tech />
       break
+    default:
+      component = <Main />
   }
   return (
     <ThemeProvider theme={darkTheme}>

@@ -1,21 +1,14 @@
 import React from 'react'
 import Data from './Data'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faGithub,
-  faLinkedin,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { Container, Typography } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2';
 
 function Projects(props) {
   const getData = Data.map((project) => {
     return (
       <div className="project--body">
         <div className="project--first">
-          <img className="project--image" src={project.imageUrl}></img>
+          <img className="project--image" src={project.imageUrl} alt="#"></img>
         </div>
         <div className="project--second">
           <h3 className="project--title">{project.Title}</h3>

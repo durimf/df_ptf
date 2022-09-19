@@ -1,23 +1,13 @@
-import { React, useState, useRef } from 'react'
+import { React, useRef } from 'react'
 // import Button from '@mui/material/Button'
 import Input from '@mui/material/Input'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
-import { ThemeProvider, createMuiTheme } from '@mui/material/styles'
 import emailjs from '@emailjs/browser'
 import { Alert, Box, Typography } from '@mui/material'
-import ReactConfetti from 'react-confetti'
 
 function ContactForm() {
   const form = useRef()
-
-  const niceAlert = () => {
-    return (
-      <Alert variant="filled" severity="success">
-        This is a success alert — check it out!
-      </Alert>
-    )
-  }
 
   const sendEmail = (e) => {
     e.preventDefault()
