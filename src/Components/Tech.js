@@ -8,8 +8,7 @@ import vsImg from '../images/techstack/vscode.png'
 import muiImg from '../images/techstack/mui.png'
 import bootImg from '../images/techstack/bootstrap.png'
 import gitHubImg from '../images/techstack/github.png'
-import { Box, Container, Grid, Paper, Typography } from '@mui/material'
-import { green } from '@mui/material/colors'
+import { Box, Container, Grid, Typography } from '@mui/material'
 function Tech(props) {
   return (
     <Container
@@ -94,34 +93,22 @@ function Tech(props) {
           ></img>
         </Grid>
         <Grid item xs={4}>
-          <img src={reactImg} className="techImg" alt="react logo image"></img>
+          <img src={reactImg} className="techImg" alt="react logo"></img>
         </Grid>
         <Grid item xs={4}>
-          <img src={gitImg} className="techImg" alt="git logo image"></img>
+          <img src={gitImg} className="techImg" alt="git logo"></img>
         </Grid>
         <Grid item xs={4}>
-          <img
-            src={vsImg}
-            className="techImg"
-            alt="visual studio logo image"
-          ></img>
+          <img src={vsImg} className="techImg" alt="visual studio logo"></img>
         </Grid>
         <Grid item xs={4}>
-          <img
-            src={muiImg}
-            className="techImg"
-            alt="material ui logo image"
-          ></img>
+          <img src={muiImg} className="techImg" alt="material ui logo"></img>
         </Grid>
         <Grid item xs={4}>
-          <img src={bootImg} className="techImg" alt="boot logo image"></img>
+          <img src={bootImg} className="techImg" alt="boot logo"></img>
         </Grid>
         <Grid item xs={4}>
-          <img
-            src={gitHubImg}
-            className="techImg"
-            alt="git hub logo image"
-          ></img>
+          <img src={gitHubImg} className="techImg" alt="git hub logo"></img>
         </Grid>
       </Grid>
     </Container>
