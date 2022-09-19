@@ -52,7 +52,7 @@ export const Navbar = ({mode, setMode}) => {
         >
           <Box onClick={e => setOpen(true)}
             sx={{
-              marginRight: 2
+              marginRight: 0
             }}
           >
             <IconButton >
@@ -86,8 +86,30 @@ export const Navbar = ({mode, setMode}) => {
               </Button>
 
             ))}
+            
 
           </Menu>
+          {/* Start of toggle lights box */}
+          <Box>
+            {mode === 'dark' ? <Button
+              onClick={e => setMode(mode === 'light' ? 'dark' : 'light')}
+              sx={{ minWidth: 10, mb: 1, color: 'text.primary' }}
+            >
+              <Tooltip title="Turn on the light">
+                <LightMode />
+              </Tooltip>
+            </Button> :
+              <Button
+                onClick={e => setMode(mode === 'light' ? 'dark' : 'light')}
+                sx={{ minWidth: 10, mb: 1, color: 'text.primary' }}
+              >
+                <Tooltip title="Turn off the light">
+                  <DarkModeOutlined />
+                </Tooltip>
+              </Button>
+            }
+          </Box>
+          {/* End of toggle lights box */}
         </Box>
         {/* End of Container XS display */}
 
@@ -129,14 +151,14 @@ export const Navbar = ({mode, setMode}) => {
               <Twitter />
             </Button>
 
-            {/* Start of toggle lights box */}
-                  <Box>
+          {/* Start of toggle lights box */}
+          <Box>
             {mode === 'dark' ? <Button
               onClick={e => setMode(mode === 'light' ? 'dark' : 'light')}
               sx={{ minWidth: 10, mb: 1, color: 'text.primary' }}
             >
               <Tooltip title="Turn on the light">
-                <LightMode  />
+                <LightMode />
               </Tooltip>
             </Button> :
               <Button
@@ -148,7 +170,7 @@ export const Navbar = ({mode, setMode}) => {
                 </Tooltip>
               </Button>
             }
-                  </Box>
+          </Box>
           {/* End of toggle lights box */}
           
 
