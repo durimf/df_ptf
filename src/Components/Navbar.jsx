@@ -1,184 +1,126 @@
-import {React, useState}  from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import darkLogo from '../images/logo-white.png'
-import lightLogo from '../images/logo-black.png'
-import styled from '@emotion/styled';
-import { Link } from '@mui/material';
-import { DarkModeOutlined, GitHub, LightMode, LinkedIn, Twitter } from '@mui/icons-material';
+import { React, useState } from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import darkLogo from "../images/logo-white.png";
+import lightLogo from "../images/logo-black.png";
+import styled from "@emotion/styled";
+import { Link, Typography } from "@mui/material";
+import {
+  DarkModeOutlined,
+  GitHub,
+  LightMode,
+  LinkedIn,
+  Twitter,
+} from "@mui/icons-material";
+import logo from "../images/logo.png";
 
-
-
-
-export const Navbar = ({mode, setMode}) => {
-
-  const [open,setOpen] = useState(false)
-  const pages = ['Home', 'Tech Stack', 'Projects', 'Contact'];
-
-  
-
-  const StyledToolbar = styled(Toolbar)({
-    display: 'flex',
-    justifyContent: 'space-around',
-    gap: 10,
-    bgcolor: 'background.default',
-    color: 'text.secondary',
-  })
+export const Navbar = ({ mode, setMode }) => {
+  const [open, setOpen] = useState(false);
+  const pages = ["Home", "Work", "Contact"];
 
   return (
-    <AppBar position="sticky" sx={{marginBottom: {
-      xs: 10,
-      md: 30
-    }}}>
-      <StyledToolbar disableGutters>
-     
-        <Box>
-          <Link href='/'underline="none">
-            <Avatar src={mode === 'dark' ? darkLogo : lightLogo} sx={{ height: 100, width: 180, marginLeft: 1 }} />
-          </Link>
-
-         </Box>
-
-         {/* Container XS display */}
-        <Box
-          sx={{display: { xs: 'flex', md: 'none' } }}
-        >
-          <Box onClick={e => setOpen(true)}
-            sx={{
-              marginRight: 0
-            }}
-          >
-            <IconButton >
-              <MenuIcon
-              ></MenuIcon>
-            </IconButton>
-          </Box>
-          <Menu
-            id="demo-positioned-menu"
-            aria-labelledby="demo-positioned-button"
-            open={open}
-            onClose={e => setOpen(false)}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right'
-            }}
-          >
-            {pages.map((page) => (
-
-              <Button
-                key={page}
-                href={page === 'tech stack' ? 'techstack' : `${page.toLowerCase()}`}
-                // onClick={handleCloseNavMenu}
-                sx={{ display: 'flex', color: 'text.primary', m: 1 }}
-              >
-                {page}
-              </Button>
-
-            ))}
-            
-
-          </Menu>
-          {/* Start of toggle lights box */}
-          <Box>
-            {mode === 'dark' ? <Button
-              onClick={e => setMode(mode === 'light' ? 'dark' : 'light')}
-              sx={{ minWidth: 10, mb: 1, color: 'text.primary' }}
-            >
-              <Tooltip title="Turn on the light">
-                <LightMode />
-              </Tooltip>
-            </Button> :
-              <Button
-                onClick={e => setMode(mode === 'light' ? 'dark' : 'light')}
-                sx={{ minWidth: 10, mb: 1, color: 'text.primary' }}
-              >
-                <Tooltip title="Turn off the light">
-                  <DarkModeOutlined />
-                </Tooltip>
-              </Button>
-            }
-          </Box>
-          {/* End of toggle lights box */}
+    <AppBar
+      position="sticky"
+      sx={{
+        px: "23px",
+        backgroundColor: "#323232",
+        height: 72,
+        opacity: 0.9,
+        mb: {
+          xs: "60px",
+          md: "120px",
+        },
+        px: {
+          xs: "24px",
+          md: "96px",
+        },
+      }}
+    >
+      {/* Container XS display */}
+      <Box
+        sx={{
+          display: { xs: "flex", md: "none" },
+          justifyContent: "space-between",
+          alignItems: "center",
+          mt: "16px",
+        }}
+      >
+        <img src={logo} height={50} />
+        <Box onClick={(e) => setOpen(true)} p={0} m={0}>
+          <IconButton>
+            <MenuIcon></MenuIcon>
+          </IconButton>
         </Box>
-        {/* End of Container XS display */}
-
-        {/* Container md display */}
-          <Box sx={{m: 2, display: { xs: 'none', md: 'flex'  }}}>
-              {pages.map((page) => (
-               
-                <Button
-                  key={page}
-                  href={page === 'tech stack' ? 'techstack' : `${page.toLowerCase()}`}
-                  sx={{ display: 'flex' , color: 'text.primary'  }}
-                  >
-                  {page}
-                </Button>
-                  
-              ))}
+        <Menu
+          id="demo-positioned-menu"
+          aria-labelledby="demo-positioned-button"
+          open={open}
+          onClose={(e) => setOpen(false)}
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "right",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "right",
+          }}
+        >
+          {pages.map((page) => (
             <Button
-              target="_blank"
-              rel="noreferrer"
-              href='https://github.com/durimf'
-              sx={{ display: 'block', minWidth: 15, color: 'text.primary' }}
-              >
-              <GitHub />
-            </Button>
-            <Button
-              target="_blank"
-              rel="noreferrer"
-              href='https://www.linkedin.com/in/durimfetahaj/'
-              sx={{ display: 'block', minWidth: 15 , color : 'text.primary' }}
-              >
-              <LinkedIn />
-            </Button>
-            <Button
-              target="_blank"
-              rel="noreferrer"
-              href='https://twitter.com/FetahajDurim'
-              sx={{ display: 'block', minWidth: 15, color: 'text.primary' }}
-              >
-              <Twitter />
-            </Button>
-
-          {/* Start of toggle lights box */}
-          <Box>
-            {mode === 'dark' ? <Button
-              onClick={e => setMode(mode === 'light' ? 'dark' : 'light')}
-              sx={{ minWidth: 10, mb: 1, color: 'text.primary' }}
+              key={page}
+              href={
+                page === "tech stack" ? "techstack" : `${page.toLowerCase()}`
+              }
+              // onClick={handleCloseNavMenu}
+              sx={{ display: "flex", color: "text.primary", m: 1 }}
             >
-              <Tooltip title="Turn on the light">
-                <LightMode />
-              </Tooltip>
-            </Button> :
-              <Button
-                onClick={e => setMode(mode === 'light' ? 'dark' : 'light')}
-                sx={{ minWidth: 10, mb: 1, color: 'text.primary' }}
-              >
-                <Tooltip title="Turn off the light">
-                  <DarkModeOutlined />
-                </Tooltip>
-              </Button>
-            }
-          </Box>
-          {/* End of toggle lights box */}
-          
+              {page}
+            </Button>
+          ))}
+        </Menu>
+      </Box>
+      {/* End of Container XS display */}
 
-            </Box>
-        {/* End of Container md display */}
+      {/* Container md display */}
+      <Box
+        sx={{
+          m: 2,
+          display: {
+            xs: "none",
+            md: "flex",
+          },
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <img src={logo} height={40} />
 
-
-      </StyledToolbar> 
+        <Box
+          sx={{
+            display: "flex",
+          }}
+        >
+          {pages.map((page) => (
+            <Button
+              key={page}
+              href={
+                page === "tech stack" ? "techstack" : `${page.toLowerCase()}`
+              }
+              sx={{ display: "flex", color: "text.primary" }}
+            >
+              {page}
+            </Button>
+          ))}
+        </Box>
+      </Box>
+      {/* End of Container md display */}
     </AppBar>
-  )
-}
+  );
+};
