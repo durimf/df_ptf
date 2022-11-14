@@ -1,6 +1,7 @@
-import { Box, Typography } from '@mui/material'
-import { React } from 'react'
-import '../App.css'
+import { Avatar, Box, Typography } from "@mui/material";
+import { React } from "react";
+import "../App.css";
+import durim from "../images/1.1.png";
 
 function Me(props) {
   return (
@@ -9,17 +10,17 @@ function Me(props) {
         display="flex"
         sx={{
           flexDirection: {
-            xs: 'column',
-            sm: 'column',
-            md: 'column',
-            lg: 'row',
-            xl: 'row',
+            xs: "column",
+            sm: "column",
+            md: "column",
+            lg: "row",
+            xl: "row",
           },
           justifyContent: {
-            xs: 'center',
-            xl: 'space-around',
+            xs: "center",
+            xl: "space-around",
           },
-          alignItems: 'center',
+          alignItems: "center",
           marginX: {
             sm: 8,
             md: 5,
@@ -32,29 +33,48 @@ function Me(props) {
           },
         }}
       >
+        <Box
+          alt="Remy Sharp"
+          src={""}
+          sx={{
+            width: {
+              xs: 240,
+              md: 400,
+            },
+            height: {
+              xs: 240,
+              md: 400,
+            },
+            backgroundImage: `url(${durim})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            borderRadius: 50,
+            marginBottom: "70px",
+          }}
+        />
         <Typography
           variant="h3"
           sx={{
             width: {
-              xs: 300,
+              xs: 350,
               sm: 400,
               md: 500,
               lg: 550,
               xl: 600,
             },
             fontSize: {
-              xs: 18,
+              xs: "36px",
               sm: 30,
               md: 35,
-              lg: 40,
-              xl: 50,
+              lg: 64,
+              xl: 64,
             },
             marginY: {
               xs: 5,
               sm: 8,
               md: 1,
             },
-            color: 'text.primary',
+            color: "text.primary",
             marginBottom: {
               sm: 5,
               md: 10,
@@ -66,21 +86,11 @@ function Me(props) {
             },
           }}
         >
-          Hi, My name is <span className="d">Durim</span> I am self-taught
-          frontend developer and I <span className="love">love</span> what I do.
+          Hi, I am Durim A Front-End Developer based in Kosovo.
         </Typography>
-        <a
-          rel="noreferrer"
-          className="me--img"
-          src="../images/qwerty.png"
-          href="https://www.linkedin.com/in/durimfetahaj/"
-          target="_blank"
-        >
-          <img className="df-img" alt=""></img>
-        </a>
       </Box>
     </>
-  )
+  );
 }
 
-export default Me
+export default Me;

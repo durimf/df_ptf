@@ -1,6 +1,6 @@
-import Projects from './Projects'
-import Tech from './Tech'
-import Me from './Me'
+import Projects from "./Projects";
+import Tech from "./Tech";
+import Me from "./Me";
 
 export const Main = () => {
   return (
@@ -9,5 +9,5 @@ export const Main = () => {
       <Tech />
       <Projects />
     </>
-  )
-}
+  );
+};
