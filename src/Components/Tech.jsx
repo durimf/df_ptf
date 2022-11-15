@@ -1,118 +1,79 @@
-import React from 'react'
-import cssImg from '../images/techstack/css.png'
-import htmlImg from '../images/techstack/html.png'
-import jsImg from '../images/techstack/js.png'
-import reactImg from '../images/techstack/react.png'
-import gitImg from '../images/techstack/git.png'
-import vsImg from '../images/techstack/vscode.png'
-import muiImg from '../images/techstack/mui.png'
-import bootImg from '../images/techstack/bootstrap.png'
-import gitHubImg from '../images/techstack/github.png'
-import { Box, Container, Grid, Typography } from '@mui/material'
-function Tech(props) {
+import React from "react";
+import { Box, Link, Typography } from "@mui/material";
+import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
+import "../App.css";
+import material from "../images/techstack/mui.png";
+import html from "../images/techstack/html.png";
+import css from "../images/techstack/css.png";
+import js from "../images/techstack/js.png";
+import react from "../images/techstack/react.png";
+
+function Tech() {
   return (
-    <Container
+    <Box
       sx={{
-        display: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        marginBottom: {
-          xs: 5,
-          sm: 10,
-          md: 30,
-          lg: 40,
-          xl: 50,
-        },
+        // backgroundColor: "red",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        color: "text.primary",
+        mb: 30,
       }}
     >
-      <Box
+      <Typography
+        color="text.primary"
         sx={{
-          color: 'text.primary',
-          marginBottom: 5,
+          fontSize: {
+            // xs: 25,
+            md: 36,
+          },
+          fontWeight: {
+            md: 700,
+          },
+          letterSpacing: 1,
+          opacity: 0.7,
+          mb: 5,
         }}
       >
-        <Typography
-          variant="h2"
-          textAlign={'center'}
-          m={1}
-          className={'skillsTitle'}
-          sx={{
-            fontSize: {
-              xs: 25,
-              sm: 35,
-              md: 70,
-              lg: 75,
-              xl: 85,
-            },
-            color: 'text.primary',
-            fontWeight: {
-              xs: 300,
-              sm: 200,
-              md: 100,
-            },
-          }}
-        >
-          My Skills
-        </Typography>
-        <Typography
-          variant="h5"
-          textAlign={'center'}
-          sx={{
-            fontSize: {
-              xs: 12,
-              md: 35,
-              lg: 35,
-              xl: 40,
-            },
+        Skills
+      </Typography>
 
-            color: 'text.primary',
-            fontWeight: {
-              xs: 200,
-              sm: 200,
-              md: 100,
-            },
+      <Box width="100%">
+        <Box
+          sx={{
+            border: "1px solid #DEDEDE",
+            borderRadius: 1,
+            p: 5,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          Skills I have so far
-        </Typography>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
+            target={"_blank"}
+          >
+            <img src={html} id="onHover" className="activeColor" />
+          </a>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+            target={"_blank"}
+          >
+            <img src={css} id="onHover" className="activeColor" />
+          </a>
+          <a href="https://www.javascript.com/" target={"_blank"}>
+            <img src={js} id="onHover" className="activeColor" />
+          </a>
+          <a href="https://mui.com/" target={"_blank"}>
+            <img src={material} id="onHover" className="activeColor" />
+          </a>
+          <a href="#" target={"_blank"}>
+            <img src={react} id="onHover" className="activeColor" />
+          </a>
+        </Box>
       </Box>
-
-      <Grid container spacing={8} marginBottom={10}>
-        <Grid item xs={4}>
-          <img src={cssImg} className="techImg" alt='cssLogo'/>
-        </Grid>
-        <Grid item xs={4}>
-          <img src={htmlImg} className="techImg" alt='htmLogo' />
-        </Grid>
-        <Grid item xs={4}>
-          <img
-            src={jsImg}
-            className="techImg"
-            alt="jsLogo"
-          />
-        </Grid>
-        <Grid item xs={4}>
-          <img src={reactImg} className="techImg" alt="#"></img>
-        </Grid>
-        <Grid item xs={4}>
-          <img src={gitImg} className="techImg" alt=""></img>
-        </Grid>
-        <Grid item xs={4}>
-          <img src={vsImg} className="techImg" alt=""></img>
-        </Grid>
-        <Grid item xs={4}>
-          <img src={muiImg} className="techImg" alt=""></img>
-        </Grid>
-        <Grid item xs={4}>
-          <img src={bootImg} className="techImg" alt=""></img>
-        </Grid>
-        <Grid item xs={4}>
-          <img src={gitHubImg} className="techImg" alt=""></img>
-        </Grid>
-      </Grid>
-    </Container>
-  )
+    </Box>
+  );
 }
 
-export default Tech
+export default Tech;
