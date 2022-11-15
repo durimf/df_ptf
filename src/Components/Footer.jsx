@@ -1,6 +1,5 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -36,13 +35,21 @@ export const Footer = () => {
           alignItems: "center",
         }}
       >
-        <a href="https://github.com/durimf" target={"_blank"}>
+        <a href="https://github.com/durimf" target={"_blank"} rel="githubicon">
           <GitHubIcon className="socialIcons" sx={{ color: "#959595" }} />
         </a>
-        <a href="https://www.linkedin.com/in/durimfetahaj/" target={"_blank"}>
+        <a
+          href="https://www.linkedin.com/in/durimfetahaj/"
+          target={"_blank"}
+          rel="linkedinicon"
+        >
           <LinkedInIcon className="socialIcons" sx={{ color: "#959595" }} />
         </a>
-        <a href="https://twitter.com/FetahajDurim" target={"_blank"}>
+        <a
+          href="https://twitter.com/FetahajDurim"
+          target={"_blank"}
+          rel="twittericon"
+        >
           <TwitterIcon className="socialIcons" sx={{ color: "#959595" }} />
         </a>
       </Box>
