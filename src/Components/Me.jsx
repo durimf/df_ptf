@@ -1,78 +1,86 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import { React } from "react";
 import "../App.css";
-import durim from "../images/1.1.png";
+import durim from "../images/34.jpg";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 
-function Me(props) {
+function Me() {
   return (
-    <>
+    <Box
+      display="flex"
+      sx={{
+        overflow: "hidden",
+        flexDirection: {
+          xs: "column",
+          md: "row",
+        },
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginBottom: {
+          xs: 10,
+          md: 30,
+        },
+      }}
+    >
       <Box
-        display="flex"
         sx={{
-          flexDirection: {
-            xs: "column",
-            sm: "column",
-            md: "column",
-            lg: "row",
-            xl: "row",
-          },
-          justifyContent: {
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: {
             xs: "center",
-            xl: "space-around",
-          },
-          alignItems: "center",
-          marginX: {
-            sm: 8,
-            md: 5,
-            lg: 15,
-            xl: 40,
-          },
-          marginBottom: {
-            xs: 10,
-            md: 50,
+            md: "start",
           },
         }}
       >
-        <Box
-          alt="Remy Sharp"
-          src={""}
-          sx={{
-            width: {
-              xs: 240,
-              md: 400,
-            },
-            height: {
-              xs: 240,
-              md: 400,
-            },
-            backgroundImage: `url(${durim})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center top",
-            borderRadius: 50,
-            marginBottom: "70px",
-          }}
-        />
         <Typography
           variant="h3"
           sx={{
+            textAlign: {
+              xs: "center",
+              md: "start",
+            },
             width: {
-              xs: 350,
-              sm: 400,
-              md: 500,
-              lg: 550,
-              xl: 600,
+              xs: 366,
+              md: 600,
+            },
+
+            lineHeight: {
+              xs: "40px",
+              md: "70px",
             },
             fontSize: {
-              xs: "36px",
-              sm: 30,
-              md: 35,
-              lg: 64,
-              xl: 64,
+              xs: 36,
+              md: 64,
             },
-            marginY: {
-              xs: 5,
-              sm: 8,
-              md: 1,
+            color: "text.primary",
+            fontWeight: {
+              xs: 700,
+            },
+            mb: 3,
+            letterSpacing: "-0.5px",
+          }}
+        >
+          Hi, I am Durim, Front-End Developer.
+        </Typography>
+        <Typography
+          variant="h3"
+          sx={{
+            textAlign: {
+              xs: "center",
+              md: "start",
+            },
+            width: {
+              xs: 366,
+              md: 435,
+            },
+            lineHeight: {
+              xs: "26px",
+              md: "36px",
+            },
+            fontSize: {
+              xs: 18,
+              md: 24,
             },
             color: "text.primary",
             marginBottom: {
@@ -80,16 +88,72 @@ function Me(props) {
               md: 10,
             },
             fontWeight: {
-              xs: 300,
-              sm: 200,
-              lg: 100,
+              xs: 500,
+              md: 300,
+            },
+            mb: {
+              xs: 5,
+              md: 3,
+            },
+            letterSpacing: "-0.5px",
+          }}
+        >
+          I am self-taught and constantly learning and building new things.
+        </Typography>
+        <Button
+          variant="filled"
+          startIcon={<EmailOutlinedIcon />}
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "16px 48px",
+            backgroundColor: "#9D9D9D",
+            borderRadius: "4px",
+            color: "text.primary",
+            width: {
+              xs: "270px",
+              md: "400px",
+            },
+            height: 64,
+            textTransform: "none",
+            mb: {
+              xs: 10,
             },
           }}
         >
-          Hi, I am Durim A Front-End Developer based in Kosovo.
-        </Typography>
+          Durimfetahaj@gmail.com
+        </Button>
       </Box>
-    </>
+      <Box
+        alt="Remy Sharp"
+        sx={{
+          width: {
+            xs: 240,
+            md: 400,
+          },
+          alignItems: "center",
+          display: "flex",
+          justifyContent: "center",
+          height: {
+            xs: 240,
+            md: 400,
+          },
+          backgroundImage: `url(${durim})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          borderRadius: 50,
+          mr: {
+            xs: "0px",
+            md: "288px",
+          },
+          mb: {
+            xs: 10,
+          },
+        }}
+      />
+    </Box>
   );
 }
 

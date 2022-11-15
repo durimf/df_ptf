@@ -1,34 +1,26 @@
 import { React, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import darkLogo from "../images/logo-white.png";
-import lightLogo from "../images/logo-black.png";
-import styled from "@emotion/styled";
-import { Link, Typography } from "@mui/material";
-import {
-  DarkModeOutlined,
-  GitHub,
-  LightMode,
-  LinkedIn,
-  Twitter,
-} from "@mui/icons-material";
-import logo from "../images/logo.png";
+import { Button, IconButton, Typography } from "@mui/material";
+import StraightRoundedIcon from "@mui/icons-material/StraightRounded";
+import "../App.css";
 
-export const Navbar = ({ mode, setMode }) => {
+import logo from "../images/logo.png";
+import { Link } from "react-router-dom";
+
+export const Navbar = () => {
   const [open, setOpen] = useState(false);
   const pages = ["Home", "Work", "Contact"];
 
   return (
     <AppBar
+      id="navbar"
       position="sticky"
       sx={{
+        boxShadow: "none",
+        width: "100vw",
         px: "23px",
         backgroundColor: "#323232",
         height: 72,
@@ -39,7 +31,7 @@ export const Navbar = ({ mode, setMode }) => {
         },
         px: {
           xs: "24px",
-          md: "96px",
+          md: "384px",
         },
       }}
     >
@@ -75,9 +67,7 @@ export const Navbar = ({ mode, setMode }) => {
           {pages.map((page) => (
             <Button
               key={page}
-              href={
-                page === "tech stack" ? "techstack" : `${page.toLowerCase()}`
-              }
+              href={`${page.toLowerCase()}`}
               // onClick={handleCloseNavMenu}
               sx={{ display: "flex", color: "text.primary", m: 1 }}
             >
@@ -107,17 +97,26 @@ export const Navbar = ({ mode, setMode }) => {
             display: "flex",
           }}
         >
-          {pages.map((page) => (
-            <Button
-              key={page}
-              href={
-                page === "tech stack" ? "techstack" : `${page.toLowerCase()}`
-              }
-              sx={{ display: "flex", color: "text.primary" }}
-            >
-              {page}
-            </Button>
-          ))}
+          {pages.map((page) =>
+            page.toLowerCase() === "work" ? (
+              <a href="#work">
+                <Button
+                  key={page}
+                  sx={{ display: "flex", color: "text.primary" }}
+                >
+                  {page}
+                </Button>
+              </a>
+            ) : (
+              <Button
+                key={page}
+                sx={{ display: "flex", color: "text.primary" }}
+                href="/"
+              >
+                {page}
+              </Button>
+            )
+          )}
         </Box>
       </Box>
       {/* End of Container md display */}
