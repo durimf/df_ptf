@@ -1,8 +1,5 @@
 import React from "react";
-import Data from "./Data";
-import { Box, Button, Container, Typography } from "@mui/material";
-import { GitHub } from "@mui/icons-material";
-import StraightRoundedIcon from "@mui/icons-material/StraightRounded";
+import { Box, Typography } from "@mui/material";
 import ProjectsImageList from "./ProjectsImageList";
 
 function Projects() {

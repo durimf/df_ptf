@@ -1,6 +1,5 @@
 import React from "react";
-import { Box, Link, Typography } from "@mui/material";
-import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
+import { Box, Typography } from "@mui/material";
 import "../App.css";
 import material from "../images/techstack/mui.png";
 import html from "../images/techstack/html.png";
@@ -51,24 +50,24 @@ function Tech() {
         >
           <a
             href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
-            target={"_blank"}
+            target={"_blank"} rel="noreferrer"
           >
-            <img src={html} id="onHover" className="activeColor" />
+            <img src={html} id="onHover" className="activeColor" alt='html-logo' />
           </a>
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-            target={"_blank"}
+            target={"_blank"} rel="noreferrer"
           >
-            <img src={css} id="onHover" className="activeColor" />
+            <img src={css} id="onHover" className="activeColor" alt='css-logo'/>
           </a>
           <a href="https://www.javascript.com/" target={"_blank"}>
-            <img src={js} id="onHover" className="activeColor" />
+            <img src={js} id="onHover" className="activeColor" alt='js-logo' />
           </a>
           <a href="https://mui.com/" target={"_blank"}>
-            <img src={material} id="onHover" className="activeColor" />
+            <img src={material} id="onHover" className="activeColor" alt='material-logo'/>
           </a>
-          <a href="#" target={"_blank"}>
-            <img src={react} id="onHover" className="activeColor" />
+          <a href="https://reactjs.org/" target={"_blank"}>
+            <img src={react} id="onHover" className="activeColor" alt='react-logo'/>
           </a>
         </Box>
       </Box>

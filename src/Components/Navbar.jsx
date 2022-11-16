@@ -3,12 +3,10 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Button, IconButton, Typography } from "@mui/material";
-import StraightRoundedIcon from "@mui/icons-material/StraightRounded";
+import { Button, IconButton } from "@mui/material";
 import "../App.css";
 
 import logo from "../images/logo.png";
-import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -21,7 +19,6 @@ export const Navbar = () => {
       sx={{
         boxShadow: "none",
         width: "100vw",
-        px: "23px",
         backgroundColor: "#323232",
         height: 72,
         opacity: 0.9,
@@ -44,7 +41,7 @@ export const Navbar = () => {
           mt: "16px",
         }}
       >
-        <img src={logo} height={50} />
+        <img src={logo} height={50} alt="web-logo"/>
         <Box onClick={(e) => setOpen(true)} p={0} m={0}>
           <IconButton>
             <MenuIcon></MenuIcon>
@@ -90,7 +87,7 @@ export const Navbar = () => {
           alignItems: "center",
         }}
       >
-        <img src={logo} height={40} />
+        <img src={logo} height={40} alt="web-logo" />
 
         <Box
           sx={{

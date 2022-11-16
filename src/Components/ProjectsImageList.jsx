@@ -2,13 +2,9 @@ import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import {
-  Button,
   IconButton,
   ImageListItemBar,
-  Link,
-  Typography,
 } from "@mui/material";
-import { bgcolor, Box } from "@mui/system";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchRoundedIcon from "@mui/icons-material/LaunchRounded";
 import VideoModal from "./VideoModal";

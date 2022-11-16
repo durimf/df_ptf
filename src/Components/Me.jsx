@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { React } from "react";
 import "../App.css";
 import durim from "../images/34.jpg";
