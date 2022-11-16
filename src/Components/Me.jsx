@@ -82,7 +82,7 @@ function Me() {
               xs: 18,
               md: 24,
             },
-            color: "text.primary",
+            color: "#959595",
             marginBottom: {
               sm: 5,
               md: 10,
@@ -113,10 +113,12 @@ function Me() {
             borderRadius: "4px",
             color: "text.primary",
             width: {
-              xs: "270px",
+              xs: "242px",
               md: "400px",
             },
-            height: 64,
+            height: {
+              xs: 64,
+            },
             textTransform: "none",
             mb: {
               xs: 10,
