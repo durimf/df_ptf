@@ -15,8 +15,8 @@ export const Navbar = () => {
   return (
     <AppBar
       id="navbar"
-      position="sticky"
       sx={{
+        position: "sticky",
         boxShadow: "none",
         width: "100vw",
         backgroundColor: "#323232",
@@ -41,7 +41,7 @@ export const Navbar = () => {
           mt: "16px",
         }}
       >
-        <img src={logo} height={50} alt="web-logo"/>
+        <img src={logo} height={50} alt="web-logo" />
         <Box onClick={(e) => setOpen(true)} p={0} m={0}>
           <IconButton>
             <MenuIcon></MenuIcon>
