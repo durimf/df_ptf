@@ -29,14 +29,9 @@ a {
   transition: transform 0.3s ease-in;
 }
 
-.socialIcons {
-  margin-right: 12px;
-}
-
 @media screen and (max-width: 600px) {
   .activeColor {
     filter: none;
-    padding: 0px;
   }
   .MuiImageList-root {
     column-count: 1 !important;

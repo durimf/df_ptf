@@ -9,7 +9,7 @@ function Me() {
     <Box
       display="flex"
       sx={{
-        overflow: "hidden",
+        overflow: "auto",
         flexDirection: {
           xs: "column",
           md: "row",
@@ -134,14 +134,14 @@ function Me() {
         sx={{
           width: {
             xs: 240,
-            md: 400,
+            md: 350,
           },
           alignItems: "center",
           display: "flex",
           justifyContent: "center",
           height: {
             xs: 240,
-            md: 400,
+            md: 350,
           },
           backgroundImage: `url(${durim})`,
           backgroundSize: "cover",
@@ -150,6 +150,7 @@ function Me() {
           mr: {
             xs: "0px",
             md: "288px",
+            lg: "188px",
           },
           mb: {
             xs: 10,

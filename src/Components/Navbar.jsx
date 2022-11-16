@@ -29,6 +29,7 @@ export const Navbar = () => {
         px: {
           xs: "24px",
           md: "384px",
+          lg: "288px",
         },
       }}
     >

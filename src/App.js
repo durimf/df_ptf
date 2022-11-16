@@ -19,6 +19,7 @@ function App() {
           px: {
             xs: "24px",
             md: "384px",
+            lg: "288px",
           },
           backgroundColor: "#292929",
           display: "flex",

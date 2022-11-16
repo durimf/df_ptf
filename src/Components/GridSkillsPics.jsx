@@ -13,13 +13,16 @@ export default function GridSkillsPics() {
   return (
     <Box
       sx={{
+        border: {
+          xs: "none",
+          md: "1px solid white",
+        },
         flexGrow: 1,
-        border: "1px solid #DEDEDE",
         borderRadius: 1,
         p: 5,
       }}
     >
-      <Grid container spacing={{ xs: 10, md: 20 }}>
+      <Grid container spacing={{ xs: 10, md: 15 }}>
         <Grid item xs={6} md={2}>
           <a
             href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
@@ -67,7 +70,7 @@ export default function GridSkillsPics() {
             />
           </a>
         </Grid>
-        <Grid item md={2}>
+        <Grid item xs={6} md={2}>
           <a href="https://reactjs.org/" target={"_blank"} rel="noreferrer">
             <img
               src={react}
@@ -77,7 +80,7 @@ export default function GridSkillsPics() {
             />
           </a>
         </Grid>
-        <Grid item md={2}>
+        <Grid item xs={6} md={2}>
           <a href="https://www.figma.com/" target={"_blank"} rel="noreferrer">
             <img
               src={figma}

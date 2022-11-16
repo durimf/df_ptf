@@ -31,7 +31,7 @@ function Tech() {
         Skills
       </Typography>
 
-      <Box width="100%">
+      <Box width="80%">
         <GridSkillsPics />
       </Box>
     </Box>
