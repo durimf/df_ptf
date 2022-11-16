@@ -2,7 +2,6 @@ import { Navbar } from "./Components/Navbar";
 import { Main } from "./Components/Main";
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 
-
 function App() {
   const darkTheme = createTheme({
     palette: {
@@ -13,7 +12,6 @@ function App() {
     },
   });
 
-  
   return (
     <ThemeProvider theme={darkTheme}>
       <Box
@@ -22,7 +20,6 @@ function App() {
             xs: "24px",
             md: "384px",
           },
-          overflow: "hidden",
           backgroundColor: "#292929",
           display: "flex",
           flexDirection: "column",
