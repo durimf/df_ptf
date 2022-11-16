@@ -60,13 +60,13 @@ function Tech() {
           >
             <img src={css} id="onHover" className="activeColor" alt='css-logo'/>
           </a>
-          <a href="https://www.javascript.com/" target={"_blank"}>
+          <a href="https://www.javascript.com/" target={"_blank"} rel="noreferrer">
             <img src={js} id="onHover" className="activeColor" alt='js-logo' />
           </a>
-          <a href="https://mui.com/" target={"_blank"}>
+          <a href="https://mui.com/" target={"_blank"} rel="noreferrer">
             <img src={material} id="onHover" className="activeColor" alt='material-logo'/>
           </a>
-          <a href="https://reactjs.org/" target={"_blank"}>
+          <a href="https://reactjs.org/" target={"_blank"} rel="noreferrer">
             <img src={react} id="onHover" className="activeColor" alt='react-logo'/>
           </a>
         </Box>

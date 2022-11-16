@@ -1,8 +1,7 @@
 import { Navbar } from "./Components/Navbar";
 import { Main } from "./Components/Main";
 import { Box, createTheme, ThemeProvider } from "@mui/material";
-import Projects from "./Components/Projects";
-import Tech from "./Components/Tech";
+
 
 function App() {
   const darkTheme = createTheme({
