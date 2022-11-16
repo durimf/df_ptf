@@ -1,7 +1,6 @@
 import React from "react";
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import "../App.css";
-import styled from "styled-components";
 import GridSkillsPics from "./GridSkillsPics";
 
 function Tech() {

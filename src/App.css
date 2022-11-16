@@ -38,4 +38,7 @@ a {
     filter: none;
     padding: 0px;
   }
+  .MuiImageList-root {
+    column-count: 1 !important;
+  }
 }

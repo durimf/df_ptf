@@ -26,12 +26,10 @@ function Projects() {
           color="text.primary"
           sx={{
             fontSize: {
-              // xs: 25,
+              xs: 28,
               md: 36,
             },
-            fontWeight: {
-              md: 700,
-            },
+            fontWeight: 700,
             letterSpacing: 1,
             opacity: 0.7,
           }}
