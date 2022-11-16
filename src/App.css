@@ -22,7 +22,6 @@ a {
   filter: grayscale(100%);
   height: 5em;
   width: 5em;
-  padding: 50px;
 }
 
 .socialIcons:hover {
