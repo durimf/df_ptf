@@ -61,7 +61,7 @@ function Me() {
             letterSpacing: "-0.5px",
           }}
         >
-          Hi, I am Durim, Front-End Developer.
+          Hi, I am Durim <br></br>Front-End Developer.
         </Typography>
         <Typography
           variant="h3"
@@ -101,6 +101,7 @@ function Me() {
           I am self-taught and constantly learning and building new things.
         </Typography>
         <Button
+          onClick={() => (window.location = "mailto:durimfetahaj@gmail.com")}
           variant="filled"
           startIcon={<EmailOutlinedIcon />}
           sx={{

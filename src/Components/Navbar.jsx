@@ -87,7 +87,9 @@ export const Navbar = () => {
           alignItems: "center",
         }}
       >
-        <img src={logo} height={40} alt="web-logo" />
+        <a href="/">
+          <img src={logo} height={50} alt="web-logo" />
+        </a>
 
         <Box
           sx={{
