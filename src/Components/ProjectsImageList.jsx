@@ -4,7 +4,6 @@ import ImageListItem from "@mui/material/ImageListItem";
 import { IconButton, ImageListItemBar, useMediaQuery } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchRoundedIcon from "@mui/icons-material/LaunchRounded";
-import VideoModal from "./VideoModal";
 
 export default function ProjectsImageList() {
   const matches = useMediaQuery("(min-width:600px)");
