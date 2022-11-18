@@ -11,62 +11,14 @@ export default function ProjectsImageList() {
   return (
     <>
       <ImageList
-        cols={matches ? 3 : 1}
+        cols={matches ? 2 : 1}
         gap={20}
-        rowHeight={800}
         sx={{
           transform: "translateZ(0)",
         }}
       >
-        <ImageListItem
-          sx={{
-            borderRadius: 1,
-            rows: 0.5,
-          }}
-        >
-          <img
-            src="https://images.unsplash.com/photo-1644246905181-c3753e9a82bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
-            alt={"Cmimi I Naftes React Native App"}
-            loading="lazy"
-            cols={2}
-            position="bottom"
-          />
-          <ImageListItemBar
-            title={"Cmimi I Naftes React Native App"}
-            position={"top"}
-          />
-
-          <ImageListItemBar
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              background:
-                "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
-                "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
-            }}
-            subtitle={"Live preview"}
-            actionIcon={
-              <IconButton
-                sx={{ color: "white" }}
-                // href={item.github}
-                target={"_blank"}
-              >
-                <VideoModal />
-              </IconButton>
-            }
-            actionPosition="left"
-          />
-        </ImageListItem>
-
         {itemData.map((item) => (
-          <ImageListItem
-            key={item.img}
-            sx={{
-              borderRadius: 1,
-              rows: 0.5,
-            }}
-          >
+          <ImageListItem key={item.img}>
             <img
               src={`${item.img}?w=161&fit=crop&auto=format`}
               srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
